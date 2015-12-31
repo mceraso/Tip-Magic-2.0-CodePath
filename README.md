@@ -22,7 +22,7 @@ http://i.imgur.com/v9IrinV.gif
 ## Notes
 Challenges included receiving incomplete instruction on how to embed views within a navigation controller. After communicating with the
 fordham undergraduate CodePath community, received the complete instruction and was able to include a green color scheme, settings screen, and permanent keyboard.
-Although I copied the image location of the gif and made sure that it ended with .gif and not .gifv, my video walkthrough does not render directly into the ReadMe on my end. Simply click the link for the gif to appear.
+Although I copied the image location of the gif and made sure that it ended with .gif and not .gifv, my video walkthrough does not render directly into the ReadMe on my end.
 
 ## License
 
