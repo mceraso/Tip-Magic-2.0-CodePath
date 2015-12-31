@@ -17,7 +17,7 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough 
 
-http://i.imgur.com/v9IrinV.gif
+<blockquote class="imgur-embed-pub" lang="en" data-id="v9IrinV"><a href="//imgur.com/v9IrinV">Tip Magic</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 ## Notes
 Challenges included receiving incomplete instruction on how to embed views within a navigation controller. After communicating with the
