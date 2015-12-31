@@ -1,5 +1,4 @@
-# Tip-Magic-2.0-CodePath
-# Pre-work - Tip Magic
+# Pre-work - Tip Magic 2.0
 
 Tip Magic is a tip calculator application for iOS.
 
