@@ -17,7 +17,7 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough 
 
-[img]http://i.imgur.com/v9IrinV.gif[/img]
+[Tip Magic](http://i.imgur.com/v9IrinV.gifv)
 
 ## Notes
 Challenges included receiving incomplete instruction on how to embed views within a navigation controller. After communicating with the
