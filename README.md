@@ -20,9 +20,7 @@ The following **optional** features are implemented:
 <img src='http://i.imgur.com/v9IrinV.gif' title='Video Walkthrough' width="alt='Video Walkthough'"/> 
 
 ## Notes
-Challenges included receiving incomplete instruction on how to embed views within a navigation controller. After communicating with the
-fordham undergraduate CodePath community, received the complete instruction and was able to include a green color scheme, settings screen, and permanent keyboard.
-Although I copied the image location of the gif and made sure that it ended with .gif and not .gifv, my video walkthrough does not render directly into the ReadMe on my end.
+Challenges included receiving incomplete instructions on how to embed views within a navigation controller and incomplete instructions on how to render my .gif directly into the ReadMe. After communicating with the fordham undergraduate CodePath community, I received the complete instructions and was able to develop a green color scheme, a settings screen, and permanent keyboard. My .gif now renders without any issue.
 
 ## License
 
