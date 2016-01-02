@@ -17,7 +17,7 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough 
 
-<img src='http://i.imgur.com/v9IrinV.gif' title='Video Walkthrough' width="alt='Video Walkthough'"/> 
+<img src='http://i.imgur.com/avstqtp.gif' title='Video Walkthrough' width="alt='Video Walkthough'"/> 
 
 ## Notes
 Challenges included receiving incomplete instructions on how to embed views within a navigation controller and incomplete instructions on how to render my .gif directly into the ReadMe. After communicating with the fordham undergraduate CodePath community, I received the complete instructions and was able to develop a green color scheme, a settings screen, and permanent keyboard. My .gif now renders without any issue.
