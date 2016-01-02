@@ -72,6 +72,7 @@
                     <connections>
                         <outlet property="billField" destination="1LL-sm-mqt" id="j0y-n2-zAy"/>
                         <outlet property="navigationItem" destination="bHn-GA-bnF" id="NO9-Ak-XDy"/>
+                        <outlet property="outputView" destination="IjW-vk-3Ma" id="px6-3y-Z4o"/>
                         <outlet property="tipControl" destination="j9m-LC-VOc" id="PJX-md-rza"/>
                         <outlet property="tipLabel" destination="GB6-sp-9QF" id="e8f-L3-ZfY"/>
                         <outlet property="totalLabel" destination="FnF-gB-PcE" id="Nhx-IX-Xkx"/>

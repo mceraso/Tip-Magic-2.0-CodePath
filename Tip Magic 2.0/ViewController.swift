@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet weak var outputView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,8 @@ class ViewController: UIViewController {
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
         billField.becomeFirstResponder()
+        outputView.alpha = 0
+        tipControl.alpha = 0
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -65,6 +68,19 @@ class ViewController: UIViewController {
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
         
+        if (billField.text != ""){
+            UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.TransitionCurlUp, animations: {
+                self.tipControl.alpha = 1.0
+                self.outputView.alpha = 1.0
+                }, completion: nil)
+            
+        }
+        else {
+            UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.TransitionFlipFromBottom, animations: {self.tipControl.alpha = 0.0
+                self.outputView.alpha = 0.0
+                }, completion: nil)
+            
+        }
     
     }
 }
