@@ -12,12 +12,13 @@ The following **required** functionality is complete:
 * [x] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
 
 The following **optional** features are implemented:
+* [x] UI animations
 * [x] Settings page to change the default tip percentage.
 * [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 ## Video Walkthrough 
 
-<img src='http://i.imgur.com/v9IrinV.gif' title='Video Walkthrough' width="alt='Video Walkthough'"/> 
+<img src='http://i.imgur.com/avstqtp.gif' title='Video Walkthrough' width="alt='Video Walkthough'"/> 
 
 ## Notes
 Challenges included receiving incomplete instructions on how to embed views within a navigation controller and incomplete instructions on how to render my .gif directly into the ReadMe. After communicating with the fordham undergraduate CodePath community, I received the complete instructions and was able to develop a green color scheme, a settings screen, and permanent keyboard. My .gif now renders without any issue.
