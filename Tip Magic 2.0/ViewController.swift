@@ -32,6 +32,8 @@ class ViewController: UIViewController {
         
         tipControl.selectedSegmentIndex = NSUserDefaults.standardUserDefaults().integerForKey("default_tip_percentage")
         
+        let recentBill = NSUserDefaults.standardUserDefaults().doubleForKey("recent_bill_amount")
+        
         let tipPercentages = [0.18, 0.2, 0.22]
         let tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
         
@@ -41,6 +43,7 @@ class ViewController: UIViewController {
         
         tipLabel.text = "$\(tip)"
         totalLabel.text = "$\(total)"
+        billField.text = "\(recentBill)"
         
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
@@ -67,6 +70,10 @@ class ViewController: UIViewController {
         
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setDouble(billAmount, forKey: "recent_bill_amount")
+        defaults.synchronize()
         
         if (billField.text != ""){
             UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.TransitionCurlUp, animations: {
