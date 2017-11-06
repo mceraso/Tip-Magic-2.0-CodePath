@@ -4,7 +4,7 @@ Tip Magic is a tip calculator application for iOS.
 
 Submitted by: Michael Ceraso
 
-Time spent: 8 - 10 hours spent in total
+Time spent: 10 - 14 hours spent in total
 
 ## User Stories
 
@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 <img src='http://i.imgur.com/avstqtp.gif' title='Video Walkthrough' width="alt='Video Walkthough'"/> 
 
 ## Notes
-Challenges included receiving incomplete instructions on how to embed views within a navigation controller and incomplete instructions on how to render my .gif directly into the ReadMe. After communicating with the fordham undergraduate CodePath community, I received the complete instructions and was able to develop a green color scheme, a settings screen, and permanent keyboard. My .gif now renders without any issue.
+Updating OS for laptop and phone and reconnecting to git were main challenges. 
 
 ## License
 
