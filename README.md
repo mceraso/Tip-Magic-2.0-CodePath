@@ -18,10 +18,10 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough 
 
-<img src='http://i.imgur.com/avstqtp.gif' title='Video Walkthrough' width="alt='Video Walkthough'"/> 
+<img src='https://i.imgur.com/wFb7lWg.gif' title='Video Walkthrough' width="alt='Video Walkthough'"/> 
 
 ## Notes
-Updating OS for laptop and phone and reconnecting to git were main challenges. 
+Migrated Swift 3 to Swift 4. Cleaned UI for more consistency and updated theme. 
 
 ## License
 
