@@ -20,19 +20,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "Tip Magic"
-        tipLabel.text = "$0.00"
-        totalLabel.text = "$0.00"
-        billField.becomeFirstResponder()
-        outputView.alpha = 0
-        tipControl.alpha = 0
-    }
-
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
         
-        tipControl.selectedSegmentIndex = NSUserDefaults.standardUserDefaults().integerForKey("default_tip_percentage")
+        tipControl.selectedSegmentIndex = UserDefaults.standard.integer(forKey: "default_tip_percentage")
         
-        let recentBill = NSUserDefaults.standardUserDefaults().doubleForKey("recent_bill_amount")
+        let recentBill = UserDefaults.standard.double(forKey: "recent_bill_amount")
         
         let tipPercentages = [0.18, 0.2, 0.22]
         let tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
@@ -45,18 +36,54 @@ class ViewController: UIViewController {
         totalLabel.text = "$\(total)"
         billField.text = "\(recentBill)"
         
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        tipLabel.text = "Tip: " + String(format: "$%.2f", tip)
+        totalLabel.text = "Total: " + String(format: "$%.2f", total)
         
+        billField.becomeFirstResponder()
+        outputView.alpha = 0
+        tipControl.alpha = 0
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tipControl.selectedSegmentIndex = UserDefaults.standard.integer(forKey: "default_tip_percentage")
+        
+        let recentBill = UserDefaults.standard.double(forKey: "recent_bill_amount")
+        
+        let tipPercentages = [0.18, 0.2, 0.22]
+        let tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
+        
+        let billAmount = NSString(string: billField.text!).doubleValue
+        let tip = billAmount * tipPercentage
+        let total = billAmount + tip
+        
+        tipLabel.text = "$\(tip)"
+        totalLabel.text = "$\(total)"
+        billField.text = "\(recentBill)"
+        
+        tipLabel.text = "Tip: " + String(format: "$%.2f", tip)
+        totalLabel.text = "Total: " + String(format: "$%.2f", total)
+        
+        if (billField.text != ""){
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.transitionCurlUp, animations: {
+                self.tipControl.alpha = 1.0
+                self.outputView.alpha = 1.0
+            }, completion: nil)
+            
+        }
+        else {
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.transitionFlipFromBottom, animations: {self.tipControl.alpha = 0.0
+                self.outputView.alpha = 0.0
+            }, completion: nil)
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    
-    
-    @IBAction func onEditingChanged(sender: AnyObject) {
+    @IBAction func onEditingChanged(_ sender: Any) {
     
         let tipPercentages = [0.18, 0.2, 0.22]
         let tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
@@ -68,22 +95,22 @@ class ViewController: UIViewController {
         tipLabel.text = "$\(tip)"
         totalLabel.text = "$\(total)"
         
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        tipLabel.text = "Tip: " + String(format: "$%.2f", tip)
+        totalLabel.text = "Total: " + String(format: "$%.2f", total)
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setDouble(billAmount, forKey: "recent_bill_amount")
+        let defaults = UserDefaults.standard
+        defaults.set(billAmount, forKey: "recent_bill_amount")
         defaults.synchronize()
         
         if (billField.text != ""){
-            UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.TransitionCurlUp, animations: {
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.transitionCurlUp, animations: {
                 self.tipControl.alpha = 1.0
                 self.outputView.alpha = 1.0
                 }, completion: nil)
             
         }
         else {
-            UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.TransitionFlipFromBottom, animations: {self.tipControl.alpha = 0.0
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.transitionFlipFromBottom, animations: {self.tipControl.alpha = 0.0
                 self.outputView.alpha = 0.0
                 }, completion: nil)
             

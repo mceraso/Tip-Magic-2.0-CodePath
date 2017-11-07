@@ -18,7 +18,7 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.title = "Settings"
         
-        let preferredTip = NSUserDefaults.standardUserDefaults().integerForKey("default_tip_percentage")
+        let preferredTip = UserDefaults.standard.integer(forKey: "default_tip_percentage")
         preferredControl.selectedSegmentIndex = preferredTip
 
     }
@@ -27,14 +27,13 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func onPreferredChange(sender: AnyObject) {
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(preferredControl.selectedSegmentIndex, forKey: "default_tip_percentage")
+    
+    @IBAction func onPreferredChange(_ sender: UISegmentedControl) {
+        let defaults = UserDefaults.standard
+        defaults.set(preferredControl.selectedSegmentIndex, forKey: "default_tip_percentage")
         defaults.synchronize()
-        
     }
-
+    
     /*
     // MARK: - Navigation
 
