@@ -100,6 +100,7 @@
 					F964833C1C34F0600041A126 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = FFN22Q7TH6;
+						LastSwiftMigration = 0910;
 					};
 				};
 			};
@@ -278,6 +279,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.Tip-Magic-2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -290,6 +293,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.Tip-Magic-2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
